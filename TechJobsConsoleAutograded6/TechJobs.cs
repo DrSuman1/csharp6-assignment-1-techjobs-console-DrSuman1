@@ -61,7 +61,7 @@ namespace TechJobsConsoleAutograded6
                     string columnChoice = GetUserSelection("Search", columnChoices);
 
                     // What is their search term?
-                    Console.WriteLine(Environment.NewLine + "Search term: ");
+                    Console.WriteLine(Environment.NewLine + "Search term: " + Environment.NewLine);
                     string searchTerm = Console.ReadLine();
 
                     // Fetch results
@@ -140,34 +140,31 @@ namespace TechJobsConsoleAutograded6
         // TODO: complete the PrintJobs method.
         public void PrintJobs(List<Dictionary<string, string>> someJobs)
         {
-            //Console.WriteLine("Welcome to LaunchCode's TechJobs App!");
-            //Console.WriteLine(Environment.NewLine);
-            //Console.WriteLine("View Jobs by(type 'x' to quit):");
-            //Console.WriteLine(Environment.NewLine);
-            //Dictionary<string, string> actionChoices = new Dictionary<string, string>();
-            //actionChoices.Add("search", "Search");
-            //actionChoices.Add("list", "List");
-
-            //Console.WriteLine("PrintJobs is not implemented yet");
-            if (someJobs.Count > 0)
-            {
-                foreach (Dictionary<string, string> dictItem in someJobs)
+         
+                //Console.WriteLine("PrintJobs is not implemented yet");
+                if (someJobs.Count > 0)
                 {
-                    Console.WriteLine("*****");
-                   // Console.WriteLine(Environment.NewLine);
-                    foreach (var item in dictItem)
+                    foreach (Dictionary<string, string> dictItem in someJobs)
                     {
-                        Console.WriteLine(item.Key.ToString() + ":" + item.Value.ToString());
-                    }
-                    Console.WriteLine("*****");
+                        Console.WriteLine("*****");
+                        // Console.WriteLine(Environment.NewLine);
+                        foreach (var item in dictItem)
+                        {
+                            Console.WriteLine(item.Key.ToString() + ": " + item.Value.ToString());
+                        }
+                        Console.WriteLine("*****");
                     
-
                 }
-            }
-            else
-            { Console.WriteLine("No results"); }
+                }
+                else
+                {
+                 Console.WriteLine("No results");
+                }
+            
 
         }
+     
+
     }
 }
 

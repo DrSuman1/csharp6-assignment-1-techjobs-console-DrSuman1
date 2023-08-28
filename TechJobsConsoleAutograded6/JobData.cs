@@ -59,8 +59,6 @@ namespace TechJobsConsoleAutograded6
                     { 
                        jobs.Add(dict);
                     }
-
-
                 }
               
             }
@@ -87,7 +85,7 @@ namespace TechJobsConsoleAutograded6
 
 
                 //TODO: Make search case-insensitive
-                if (aValue.Contains(value))
+                if (aValue.ToUpper().Contains(value.ToUpper()))
                 {
                     jobs.Add(row);
                 }

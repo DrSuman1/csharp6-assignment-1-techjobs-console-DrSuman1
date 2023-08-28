@@ -20,7 +20,6 @@ location: Portland
 position type: Web - Front End
 core competency: Ruby
 *****
-
 *****
 name: Full Stack Engineer
 employer: Splitwise
@@ -28,7 +27,6 @@ location: Rhode Island
 position type: Web - Full Stack
 core competency: Ruby
 *****
-
 *****
 name: QA Analyst
 employer: Bandcamp
@@ -36,7 +34,6 @@ location: New York
 position type: Other
 core competency: Ruby, Javascript
 *****
-
 *****
 name: Ruby specialist
 employer: LaunchCode
