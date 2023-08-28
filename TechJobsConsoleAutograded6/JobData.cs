@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Data.Common;
+using System.Reflection.PortableExecutable;
 using System.Text;
 
 namespace TechJobsConsoleAutograded6
@@ -45,9 +47,24 @@ namespace TechJobsConsoleAutograded6
         public static List<Dictionary<string, string>> FindByValue(string value)
         {
             // load data, if not already loaded
+            List<Dictionary<string, string>> jobs = new List<Dictionary<string, string>>();
             LoadData();
 
-            return null;
+            foreach (Dictionary<string, string> dict in AllJobs)
+            {
+               
+                foreach (var item in dict)
+                {
+                    if (item.Value.Contains(value))
+                    { 
+                       jobs.Add(dict);
+                    }
+
+
+                }
+              
+            }
+            return jobs;
         }
 
         /**

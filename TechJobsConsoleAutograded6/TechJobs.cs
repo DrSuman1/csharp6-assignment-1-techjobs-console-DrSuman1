@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Globalization;
 
 namespace TechJobsConsoleAutograded6
 {
@@ -64,7 +67,9 @@ namespace TechJobsConsoleAutograded6
                     // Fetch results
                     if (columnChoice.Equals("all"))
                     {
-                        Console.WriteLine("Search all fields not yet implemented.");
+                        //Console.WriteLine("Search all fields not yet implemented.");
+                        List<Dictionary<string, string>> searchResults = JobData.FindByValue(searchTerm);
+                        PrintJobs(searchResults);
                     }
                     else
                     {
@@ -135,7 +140,33 @@ namespace TechJobsConsoleAutograded6
         // TODO: complete the PrintJobs method.
         public void PrintJobs(List<Dictionary<string, string>> someJobs)
         {
-            Console.WriteLine("PrintJobs is not implemented yet");
+            //Console.WriteLine("Welcome to LaunchCode's TechJobs App!");
+            //Console.WriteLine(Environment.NewLine);
+            //Console.WriteLine("View Jobs by(type 'x' to quit):");
+            //Console.WriteLine(Environment.NewLine);
+            //Dictionary<string, string> actionChoices = new Dictionary<string, string>();
+            //actionChoices.Add("search", "Search");
+            //actionChoices.Add("list", "List");
+
+            //Console.WriteLine("PrintJobs is not implemented yet");
+            if (someJobs.Count > 0)
+            {
+                foreach (Dictionary<string, string> dictItem in someJobs)
+                {
+                    Console.WriteLine("*****");
+                   // Console.WriteLine(Environment.NewLine);
+                    foreach (var item in dictItem)
+                    {
+                        Console.WriteLine(item.Key.ToString() + ":" + item.Value.ToString());
+                    }
+                    Console.WriteLine("*****");
+                    
+
+                }
+            }
+            else
+            { Console.WriteLine("No results"); }
+
         }
     }
 }
