@@ -147,14 +147,15 @@ namespace TechJobsConsoleAutograded6
                     foreach (Dictionary<string, string> dictItem in someJobs)
                     {
                         Console.WriteLine("*****");
-                        // Console.WriteLine(Environment.NewLine);
+                        
                         foreach (var item in dictItem)
                         {
                             Console.WriteLine(item.Key.ToString() + ": " + item.Value.ToString());
                         }
                         Console.WriteLine("*****");
-                    
-                }
+                        //Console.WriteLine(Environment.NewLine);
+
+                    }
                 }
                 else
                 {
